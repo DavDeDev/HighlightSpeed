@@ -1,18 +1,27 @@
 {
-  "name": "Highlight Speed",
-  "version": "1.0",
-  "manifest_version": 3,
-  "action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "host_permissions": ["<all_urls>"],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "all_frames": true,
-      "js": ["content.js"],
-      "css": ["style.css"]
+    "name": "Bionic Reader",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ],
+    "commands": {
+      "toggle-highlight": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+H"
+        },
+        "description": "Toggle word highlighting"
+      }
     }
-  ]
-}
+  }
+  
